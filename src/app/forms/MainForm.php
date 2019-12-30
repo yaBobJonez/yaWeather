@@ -37,7 +37,7 @@ class MainForm extends AbstractForm
     function doShowing(UXWindowEvent $e = null)
     {    
         $location = Json::fromFile("http://ip-api.com/json/?fields=lat,lon");
-        $GLOBALS['weather'] = new yaWeather("829229fbdc6017f34de5f256d61d9930");
+        $GLOBALS['weather'] = new yaWeather("XXX"); //TYPE YOUR API KEY HERE!!!
         $GLOBALS['weather']->setUnits($this->config->get("Units"));
         $GLOBALS['weather']->getByCoordinates($location['lat'], $location['lon']);
         call_user_func([$this, "refresh"], 0);
