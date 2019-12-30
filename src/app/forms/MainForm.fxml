@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480" prefWidth="640" styleClass="">
+  <children>
+    <Panel AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" backgroundColor="#ffffff" borderColor="#c0c0c0" borderRadius="0" borderStyle="SOLID" borderWidth="1" focusTraversable="false" id="t_bg_panel" layoutX="0" layoutY="0" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="480" prefWidth="640" styleClass="" titleColor="#333333" titleOffset="15" titlePosition="TOP_LEFT">
+      <children>
+        <TextField AnchorPane.leftAnchor="32" AnchorPane.rightAnchor="31" AnchorPane.topAnchor="15" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="searchbar" layoutX="33" layoutY="16" prefColumnCount="12" prefHeight="64" prefWidth="576" promptText="Search" style="-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 25; -fx-font-weight: bold;" text="">
+          <styleClass xmlns:fx="http://javafx.com/fxml">
+            <String fx:value="text-input"/>
+            <String fx:value="text-field"/>
+            <String fx:value="csearch"/>
+          </styleClass>
+          <font>
+            <Font name="Dax-Bold" size="25"/>
+          </font>
+        </TextField>
+        <Data cursor="DEFAULT" enabled="1" id="data-searchbar" visible="1"/>
+        <Button AnchorPane.rightAnchor="55" AnchorPane.topAnchor="15" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="search" layoutX="512" layoutY="16" prefHeight="64" prefWidth="64" styleClass="button cbutton " text="" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" graphic=".data/img/search.png" id="data-search" visible="1"/>
+        <ImageViewEx AnchorPane.leftAnchor="135" AnchorPane.topAnchor="87" autoSize="false" centered="false" focusTraversable="false" height="56" id="i_temp" layoutX="136" layoutY="88" mosaic="false" mosaicGap="0" proportional="false" stretch="true" styleClass="" textFill="#000000" width="56">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </ImageViewEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-i_temp" image=".data/img/temperature.png" visible="1"/>
+        <ImageViewEx AnchorPane.leftAnchor="231" AnchorPane.topAnchor="87" autoSize="false" centered="false" focusTraversable="false" height="56" id="i_pres" layoutX="232" layoutY="88" mosaic="false" mosaicGap="0" proportional="false" stretch="true" styleClass="" textFill="#000000" width="56">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </ImageViewEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-i_pres" image=".data/img/pressure.png" visible="1"/>
+        <ImageViewEx AnchorPane.leftAnchor="327" AnchorPane.topAnchor="87" autoSize="false" centered="false" focusTraversable="false" height="56" id="i_hum" layoutX="328" layoutY="88" mosaic="false" mosaicGap="0" proportional="false" stretch="true" styleClass="" textFill="#000000" width="56">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </ImageViewEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-i_hum" image=".data/img/humidity.png" visible="1"/>
+        <ImageViewEx AnchorPane.leftAnchor="423" AnchorPane.topAnchor="88" autoSize="false" centered="false" focusTraversable="false" height="56" id="winddirection" layoutX="424" layoutY="89" mosaic="false" mosaicGap="0" proportional="false" stretch="true" styleClass="" textFill="#000000" width="56">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </ImageViewEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-winddirection" image=".data/img/winddir.png" visible="1"/>
+        <LabelEx AnchorPane.leftAnchor="127" AnchorPane.topAnchor="151" alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="temp" layoutX="128" layoutY="152" prefHeight="17" prefWidth="72" style="-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 14; -fx-font-weight: bold;" styleClass="label " text="XXXX°U" textAlignment="LEFT" underline="false" wrapText="false">
+          <font>
+            <Font name="Dax-Bold" size="14"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-temp" visible="1"/>
+        <Separator AnchorPane.leftAnchor="127" AnchorPane.topAnchor="167" focusTraversable="false" id="separator" layoutX="128" layoutY="168" orientation="HORIZONTAL" prefHeight="8" prefWidth="72" styleClass="separator "/>
+        <Data cursor="DEFAULT" enabled="1" id="data-separator" visible="1"/>
+        <Separator AnchorPane.leftAnchor="223" AnchorPane.topAnchor="167" focusTraversable="false" id="separatorAlt" layoutX="224" layoutY="168" orientation="HORIZONTAL" prefHeight="8" prefWidth="72" styleClass="separator "/>
+        <Data cursor="DEFAULT" enabled="1" id="data-separatorAlt" visible="1"/>
+        <Separator AnchorPane.leftAnchor="319" AnchorPane.topAnchor="167" focusTraversable="false" id="separator3" layoutX="320" layoutY="168" orientation="HORIZONTAL" prefHeight="8" prefWidth="72" styleClass="separator "/>
+        <Data cursor="DEFAULT" enabled="1" id="data-separator3" visible="1"/>
+        <Separator AnchorPane.leftAnchor="415" AnchorPane.topAnchor="167" focusTraversable="false" id="separator4" layoutX="416" layoutY="168" orientation="HORIZONTAL" prefHeight="8" prefWidth="72" styleClass="separator "/>
+        <Data cursor="DEFAULT" enabled="1" id="data-separator4" visible="1"/>
+        <LabelEx AnchorPane.leftAnchor="223" AnchorPane.topAnchor="151" alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="pressure" layoutX="224" layoutY="152" prefHeight="17" prefWidth="72" style="-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 14; -fx-font-weight: bold;" styleClass="label " text="XXXX U" textAlignment="LEFT" underline="false" wrapText="false">
+          <font>
+            <Font name="Dax-Bold" size="14"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-pressure" visible="1"/>
+        <LabelEx AnchorPane.leftAnchor="319" AnchorPane.topAnchor="151" alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="humidity" layoutX="320" layoutY="152" prefHeight="18" prefWidth="72" style="-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 14; -fx-font-weight: bold;" styleClass="label " text="XXX %" textAlignment="LEFT" underline="false" wrapText="false">
+          <font>
+            <Font name="Dax-Bold" size="14"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-humidity" visible="1"/>
+        <LabelEx alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="windspeed" layoutX="416" layoutY="152" prefHeight="17" prefWidth="72" style="-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 14; -fx-font-weight: bold;" styleClass="label " text="XXX U" textAlignment="LEFT" underline="false" wrapText="false">
+          <font>
+            <Font name="Dax-Bold" size="14"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-windspeed" visible="1"/>
+        <Separator focusTraversable="false" id="separator5" layoutX="48" layoutY="56" orientation="HORIZONTAL" prefHeight="8" prefWidth="464" styleClass="separator "/>
+        <Data cursor="DEFAULT" enabled="1" id="data-separator5" visible="1"/>
+        <LabelEx AnchorPane.leftAnchor="239" AnchorPane.rightAnchor="39" AnchorPane.topAnchor="205" alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="main" layoutX="240" layoutY="206" prefHeight="32" prefWidth="360" style="-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 25; -fx-font-weight: bold;" styleClass="label " text="MAIN WEATHER CONDITION" textAlignment="LEFT" underline="false" wrapText="false">
+          <font>
+            <Font name="Dax-Bold" size="25"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-main" visible="1"/>
+        <LabelEx AnchorPane.bottomAnchor="71" AnchorPane.leftAnchor="232" AnchorPane.rightAnchor="31" AnchorPane.topAnchor="247" alignment="TOP_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="desc" layoutX="233" layoutY="248" prefHeight="160" prefWidth="376" style="-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 14; -fx-font-weight: bold;" styleClass="label " text="Full weather description" textAlignment="LEFT" underline="false" wrapText="true">
+          <font>
+            <Font name="Dax-Bold" size="14"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-desc" visible="1"/>
+        <Button AnchorPane.bottomAnchor="15" AnchorPane.leftAnchor="15" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="prev" layoutX="16" layoutY="408" prefHeight="56" prefWidth="56" styleClass="button cbutton " text="" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" graphic=".data/img/prev.png" id="data-prev" visible="1"/>
+        <Button AnchorPane.bottomAnchor="11" AnchorPane.leftAnchor="144" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="next" layoutX="145" layoutY="404" prefHeight="64" prefWidth="64" styleClass="button cbutton " text="" textAlignment="CENTER" underline="false" wrapText="false">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" graphic=".data/img/next.png" id="data-next" visible="1"/>
+        <LabelEx AnchorPane.bottomAnchor="15" AnchorPane.leftAnchor="71" alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="dated" layoutX="72" layoutY="408" prefHeight="56" prefWidth="80" style="-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 14; -fx-font-weight: bold;" styleClass="label " text="XX/XX/XXXX XX:XX AM" textAlignment="LEFT" underline="false" wrapText="true">
+          <font>
+            <Font name="Dax-Bold" size="14"/>
+          </font>
+        </LabelEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-dated" visible="1"/>
+        <ImageViewEx AnchorPane.bottomAnchor="63" AnchorPane.leftAnchor="23" autoSize="false" centered="false" focusTraversable="false" height="48" id="i_forecast" layoutX="24" layoutY="368" mosaic="false" mosaicGap="0" proportional="false" stretch="true" styleClass="" textFill="#000000" width="176">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </ImageViewEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-i_forecast" image=".data/img/forecast.png" visible="1"/>
+        <ImageViewEx AnchorPane.leftAnchor="24" AnchorPane.topAnchor="191" autoSize="false" centered="false" focusTraversable="false" height="168" id="icon" layoutX="25" layoutY="192" mosaic="false" mosaicGap="0" proportional="false" stretch="true" styleClass="" textFill="#000000" width="176">
+          <font>
+            <Font name="System Regular" size="12"/>
+          </font>
+        </ImageViewEx>
+        <Data cursor="DEFAULT" enabled="1" id="data-icon" visible="1"/>
+        <Button AnchorPane.bottomAnchor="23" AnchorPane.rightAnchor="31" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="Imperial" layoutX="560" layoutY="416" prefHeight="40" prefWidth="48" style="-fx-background-color: #3c8558, #52ffb8; -fx-border-color: #3c8558; -fx-border-width: 2; -fx-border-radius: 40;&#10;-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 18; -fx-font-weight: bold;" styleClass="button cbutton " text="°F" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="Dax-Bold" size="18"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" id="data-Imperial" visible="1"/>
+        <Button AnchorPane.bottomAnchor="23" AnchorPane.rightAnchor="79" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="metric" layoutX="512" layoutY="416" prefHeight="40" prefWidth="48" style="-fx-background-color: #3c8558, #52ffb8; -fx-border-color: #3c8558; -fx-border-width: 2; -fx-border-radius: 40;&#10;-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 18; -fx-font-weight: bold;" styleClass="button cbutton " text="°C" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="Dax-Bold" size="18"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" id="data-metric" visible="1"/>
+        <Button AnchorPane.bottomAnchor="23" AnchorPane.rightAnchor="127" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="suckit" layoutX="464" layoutY="416" prefHeight="40" prefWidth="48" style="-fx-background-color: #3c8558, #52ffb8; -fx-border-color: #3c8558; -fx-border-width: 2; -fx-border-radius: 40;-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 18; -fx-font-weight: bold;" styleClass="button cbutton " text="°K" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="Dax-Bold" size="18"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" id="data-suckit" visible="1"/>
+        <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="reload" layoutX="368" layoutY="416" prefHeight="39" prefWidth="96" style="-fx-background-color: #3c8558, #52ffb8; -fx-border-color: #3c8558; -fx-border-width: 2; -fx-border-radius: 40;-fx-font-family: &quot;Dax-Bold&quot;; -fx-font-size: 18; -fx-font-weight: bold;" styleClass="button cbutton " text="Refresh" textAlignment="CENTER" textFill="#ffffff" underline="false" wrapText="false">
+          <font>
+            <Font name="Dax-Bold" size="18"/>
+          </font>
+        </Button>
+        <Data cursor="DEFAULT" enabled="1" id="data-reload" visible="1"/>
+      </children>
+      <titleFont>
+        <Font name="System Regular" size="12"/>
+      </titleFont>
+    </Panel>
+    <Data cursor="DEFAULT" enabled="1" id="data-t_bg_panel" visible="1"/>
+  </children>
+</AnchorPane>

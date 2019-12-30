@@ -1,0 +1,22 @@
+@dax-font {
+    -fx-font-family: 'Dax-Bold';
+    src: url('/.data/DaxBold.ttf');
+}
+.csearch {
+    -fx-padding: 10, 20;
+    -fx-border-radius: 40;
+    -fx-border-color: #3c8558;
+    -fx-border-width: 3;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 40;
+    -fx-font-family: 'Dax-Bold';
+    -fx-display-caret: true;
+}
+.cbutton {
+    -fx-background-radius: 100;
+    -fx-background-color: rgba(237, 237, 237, 0.3);
+}
+.cbutton:pressed {
+    -fx-background-radius: 100;
+    -fx-background-color: rgba(237, 237, 237, 1);
+}
